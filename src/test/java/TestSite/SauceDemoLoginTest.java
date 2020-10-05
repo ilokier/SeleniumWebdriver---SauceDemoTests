@@ -3,6 +3,7 @@ package TestSite;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -20,7 +21,6 @@ public class SauceDemoLoginTest {
     WebDriver driver;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
     private WebDriverWait wait;
-    private BasePage basePage;
     protected final static String BASE_URL = "https://www.saucedemo.com/";
 
     //dane do rejestracji
@@ -56,7 +56,12 @@ public class SauceDemoLoginTest {
         saucedemoLocatorsPage.fillName(usernameParameter)
                 .fillPasword(passwordParameter)
                 .clickLogin();
+        String pageTitle = driver.getTitle();
+        Assertions.assertEquals(driver.getTitle(),"Swag Labs");
+        System.out.println("Actual page title: "+ pageTitle);
     }
+
+
 
     @After
     public void quitBrowser() {
