@@ -9,7 +9,7 @@ public class SaucedemoLocatorsPage {
     private WebDriver driver;
 
     //konstruktor
-    public SaucedemoLocatorsPage (WebDriver driver) {
+    public SaucedemoLocatorsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -21,6 +21,8 @@ public class SaucedemoLocatorsPage {
     WebElement password;
     @FindBy(xpath = "//input[@id = 'login-button']")
     WebElement loginButton;
+    @FindBy(xpath = "//h3[contains(@data-test, 'error')]")
+    WebElement loginError;
 
 
     public SaucedemoLocatorsPage fillName(String fillUsername) {
@@ -36,6 +38,12 @@ public class SaucedemoLocatorsPage {
     public SaucedemoLocatorsPage clickLogin() {
         loginButton.click();
         return this;
+    }
+
+    public String getErrorMessage(String error) {
+        String attribute = loginError.getAttribute(error);
+        return attribute;
+
     }
 
 

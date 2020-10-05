@@ -17,7 +17,7 @@ import java.util.Collection;
 
 @RunWith(Parameterized.class)
 
-public class SauceDemoLoginTest {
+public class SauceDemoPositiveLoginTest {
     WebDriver driver;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
     private WebDriverWait wait;
@@ -47,7 +47,6 @@ public class SauceDemoLoginTest {
         PageFactory.initElements(driver, this);
         driver.manage().window().maximize();
         driver.get(BASE_URL);
-
     }
 
     @Test
@@ -57,11 +56,9 @@ public class SauceDemoLoginTest {
                 .fillPasword(passwordParameter)
                 .clickLogin();
         String pageTitle = driver.getTitle();
-        Assertions.assertEquals(driver.getTitle(),"Swag Labs");
-        System.out.println("Actual page title: "+ pageTitle);
+        Assertions.assertEquals(driver.getTitle(), "Swag Labs");
+        System.out.println("Actual page title: " + pageTitle);
     }
-
-
 
     @After
     public void quitBrowser() {
