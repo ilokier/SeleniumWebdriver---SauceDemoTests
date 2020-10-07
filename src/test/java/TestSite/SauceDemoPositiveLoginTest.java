@@ -1,6 +1,5 @@
 package TestSite;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
@@ -20,7 +19,9 @@ import java.util.Collection;
 public class SauceDemoPositiveLoginTest {
     WebDriver driver;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
+    private SwagLabsLocatorsPage swagLabsLocatorsPage;
     private WebDriverWait wait;
+    private SwagLabsLocatorsPage cartItem;
     protected final static String BASE_URL = "https://www.saucedemo.com/";
 
     //dane do rejestracji
@@ -34,9 +35,9 @@ public class SauceDemoPositiveLoginTest {
     public static Collection<Object[]> dataForRegistration() {
         return Arrays.asList(new Object[][]{
                 {"standard_user", "secret_sauce"},
-                {"locked_out_user", "secret_sauce"},
-                {"problem_user", "secret_sauce"},
-                {"performance_glitch_user", "secret_sauce"},
+//                {"locked_out_user", "secret_sauce"},
+//                {"problem_user", "secret_sauce"},
+//                {"performance_glitch_user", "secret_sauce"},
         });
     }
 
@@ -52,18 +53,33 @@ public class SauceDemoPositiveLoginTest {
     @Test
     public void WhenAccurateDataPutedShouldLoggin() {
         saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
+        swagLabsLocatorsPage = new SwagLabsLocatorsPage(driver);
         saucedemoLocatorsPage.fillName(usernameParameter)
                 .fillPasword(passwordParameter)
                 .clickLogin();
         String pageTitle = driver.getTitle();
         Assertions.assertEquals(driver.getTitle(), "Swag Labs");
         System.out.println("Actual page title: " + pageTitle);
-    }
 
-    @After
-    public void quitBrowser() {
-        driver.quit();
+        swagLabsLocatorsPage.pickBackpack();
+        swagLabsLocatorsPage.addBackpackToCart();
+        swagLabsLocatorsPage.goToCart();
+
+        String cartItem = swagLabsLocatorsPage.getItemText();
+
+        Assertions.assertEquals(cartItem, "Sauce Labs Backpack");
+        System.out.println("item name is: " + cartItem);
+        swagLabsLocatorsPage.removeItemFromCart();
+
     }
+// TODO: refaktor
+
+
+    //}
+//    @After
+//    public void quitBrowser() {
+//        driver.quit();
+//    }
 
 
 }

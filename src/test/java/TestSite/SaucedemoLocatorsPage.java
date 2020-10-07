@@ -25,6 +25,7 @@ public class SaucedemoLocatorsPage {
     WebElement loginError;
 
 
+
     public SaucedemoLocatorsPage fillName(String fillUsername) {
         username.sendKeys(fillUsername);
         return this;

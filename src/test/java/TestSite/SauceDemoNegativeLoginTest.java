@@ -31,7 +31,8 @@ public class SauceDemoNegativeLoginTest {
     public static Collection<Object[]> dataForNegaitveRegistration() {
         return Arrays.asList(new Object[][]{
                 {"incorrect_login", "secret_sauce"},
-                {"locked_out_user", "incerrect_password"}
+                {"locked_out_user", "incerrect_password"},
+                {"incorrect_login", "incerrect_password"}
         });
     }
 
