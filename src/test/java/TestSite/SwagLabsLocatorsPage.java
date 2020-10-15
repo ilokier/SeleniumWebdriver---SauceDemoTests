@@ -26,6 +26,8 @@ public class SwagLabsLocatorsPage {
     WebElement cartInventoryItem;
     @FindBy(xpath = "//button[@class = 'btn_secondary cart_button']")
     WebElement removeButton;
+    @FindBy(xpath = "//div[@class='cart_list']")
+    WebElement cartList;
 
 
     public SwagLabsLocatorsPage pickBackpack() {
@@ -51,6 +53,9 @@ public class SwagLabsLocatorsPage {
     public SwagLabsLocatorsPage removeItemFromCart() {
         removeButton.click();
         return this;
+    }
+    public String getCartItems(){
+        return cartList.getText();
     }
 }
 

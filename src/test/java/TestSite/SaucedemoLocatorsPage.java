@@ -26,6 +26,7 @@ public class SaucedemoLocatorsPage {
 
 
 
+
     public SaucedemoLocatorsPage fillName(String fillUsername) {
         username.sendKeys(fillUsername);
         return this;
@@ -44,7 +45,6 @@ public class SaucedemoLocatorsPage {
     public String getErrorMessage(String error) {
         String attribute = loginError.getAttribute(error);
         return attribute;
-
     }
 
 

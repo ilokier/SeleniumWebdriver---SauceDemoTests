@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +16,8 @@ import java.util.Collection;
 
 @RunWith(Parameterized.class)
 
-public class SauceDemoPositiveLoginTest {
+public class SauceDemoCartTest {
+
     WebDriver driver;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
     private SwagLabsLocatorsPage swagLabsLocatorsPage;
@@ -31,14 +31,10 @@ public class SauceDemoPositiveLoginTest {
     @Parameterized.Parameter(1)
     public String passwordParameter;
 
-
-    @Parameters(name = "Test {index}: username: {0}, password: {1}")
+    @Parameterized.Parameters(name = "Test {index}: username: {0}, password: {1}")
     public static Collection<Object[]> dataForRegistration() {
         return Arrays.asList(new Object[][]{
                 {"standard_user", "secret_sauce"},
-                {"locked_out_user", "secret_sauce"},
-                {"problem_user", "secret_sauce"},
-                {"performance_glitch_user", "secret_sauce"},
         });
     }
 
@@ -49,34 +45,32 @@ public class SauceDemoPositiveLoginTest {
         PageFactory.initElements(driver, this);
         driver.manage().window().maximize();
         driver.get(BASE_URL);
-    }
-
-    @Test
-    public void WhenAccurateDataPutedShouldLoggin() {
         saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
         swagLabsLocatorsPage = new SwagLabsLocatorsPage(driver);
         saucedemoLocatorsPage.fillName(usernameParameter)
                 .fillPasword(passwordParameter)
                 .clickLogin();
-        String pageTitle = driver.getTitle();
-        Assertions.assertEquals(driver.getTitle(), "Swag Labs");
-        System.out.println("Actual page title: " + pageTitle);
+    }
 
+    @Test
+    public void WhenItemAddedToCartShouldBeWisibleInCart() {
         swagLabsLocatorsPage.pickBackpack();
         swagLabsLocatorsPage.addBackpackToCart();
         swagLabsLocatorsPage.goToCart();
 
         String cartItem = swagLabsLocatorsPage.getItemText();
-
         Assertions.assertEquals(cartItem, "Sauce Labs Backpack");
         System.out.println("item name is: " + cartItem);
         swagLabsLocatorsPage.removeItemFromCart();
+        String cartItems = swagLabsLocatorsPage.getCartItems();
+        System.out.println(cartItems);
+        Assertions.assertNotEquals(cartItems, "Sauce Labs Backpack");
     }
 
     @After
     public void quitBrowser() {
         driver.quit();
     }
-
-
 }
+
+
