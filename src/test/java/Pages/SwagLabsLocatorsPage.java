@@ -17,17 +17,17 @@ public class SwagLabsLocatorsPage {
     // @FindBy(xpath = "//a[@id='item_4_title_link']")
     @FindBy(linkText = "Sauce Labs Backpack")
     WebElement backpackItem;
-    @FindBy(xpath = "//button[@class = 'btn_primary btn_inventory']")
+    @FindBy(xpath = "//button[@class='btn_primary btn_inventory']")
     WebElement addBackpackToCartButton;
     @FindBy(css = "svg[data-prefix='fas']")
     WebElement cart;
     //cart
     @FindBy(xpath = "//div[@class = 'inventory_item_name']")
     WebElement cartInventoryItem;
-    @FindBy(xpath = "//button[@class = 'btn_secondary cart_button']")
+    @FindBy(xpath = "//button[@class='btn_secondary cart_button']")
     WebElement removeButton;
-    @FindBy(xpath = "//div[@class='cart_list']")
-    WebElement cartList;
+    @FindBy(id = "shopping_cart_container")
+    WebElement cartItemsCounter;
 
 
     public SwagLabsLocatorsPage pickBackpack() {
@@ -54,8 +54,8 @@ public class SwagLabsLocatorsPage {
         removeButton.click();
         return this;
     }
-    public String getCartItems(){
-        return cartList.getText();
+    public String checkIfCartIsEmpty(){
+     return cartItemsCounter.getText();
     }
 }
 

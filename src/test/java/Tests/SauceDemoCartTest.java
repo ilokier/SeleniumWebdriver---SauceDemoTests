@@ -62,16 +62,24 @@ public class SauceDemoCartTest extends SauceDemoPositiveLoginTest {
         String cartItem = swagLabsLocatorsPage.getItemText();
         Assertions.assertEquals(cartItem, "Sauce Labs Backpack");
         System.out.println("item name is: " + cartItem);
+
+    }
+
+    @Test
+    public void WhenItemRemovedCasrtShouldBeEmpty() {
+        swagLabsLocatorsPage.pickBackpack();
+        swagLabsLocatorsPage.addBackpackToCart();
+        swagLabsLocatorsPage.goToCart();
         swagLabsLocatorsPage.removeItemFromCart();
-        String cartItems = swagLabsLocatorsPage.getCartItems();
-        System.out.println(cartItems);
-        Assertions.assertNotEquals(cartItems, "Sauce Labs Backpack");
+        Assertions.assertTrue(swagLabsLocatorsPage.checkIfCartIsEmpty().isEmpty());
     }
 
     @After
     public void quitBrowser() {
         driver.quit();
     }
+
+
 }
 
 
