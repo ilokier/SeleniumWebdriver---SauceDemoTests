@@ -1,7 +1,6 @@
 package Tests;
 
 import Pages.SaucedemoLocatorsPage;
-import Pages.SwagLabsLocatorsPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,9 +21,7 @@ import java.util.Collection;
 public class SauceDemoPositiveLoginTest {
     WebDriver driver;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
-    private SwagLabsLocatorsPage swagLabsLocatorsPage;
     private WebDriverWait wait;
-    private SwagLabsLocatorsPage cartItem;
     protected final static String BASE_URL = "https://www.saucedemo.com/";
 
     //dane do rejestracji
@@ -55,8 +52,8 @@ public class SauceDemoPositiveLoginTest {
     @Test
     public void WhenAccurateDataPutedShouldLoggin() {
         saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
-        swagLabsLocatorsPage = new SwagLabsLocatorsPage(driver);
         saucedemoLocatorsPage.logIn(usernameParameter, passwordParameter);
+
         Assertions.assertEquals(driver.getTitle(), "Swag Labs");
     }
 

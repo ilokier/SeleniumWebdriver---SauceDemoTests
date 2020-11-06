@@ -19,7 +19,6 @@ import java.util.Collection;
 
 public class SauceDemoNegativeLoginTest {
     private WebDriver driver;
-    String error;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
     protected final static String BASE_URL = "https://www.saucedemo.com/";
 
@@ -32,9 +31,9 @@ public class SauceDemoNegativeLoginTest {
     @Parameters(name = "Test {index}:, username: {0}, password: {1}")
     public static Collection<Object[]> dataForNegaitveRegistration() {
         return Arrays.asList(new Object[][]{
-                {"incorrect_login", "secret_sauce"},
-                {"locked_out_user", "incerrect_password"},git
-                {"incorrect_login", "incerrect_password"}
+                {"standard_user", "invalid_password"},
+                {"invalid_user", "secret_sauce"},
+                {"invalid_user", "invalid_password"}
         });
     }
 
@@ -45,7 +44,6 @@ public class SauceDemoNegativeLoginTest {
         PageFactory.initElements(driver, this);
         driver.manage().window().maximize();
         driver.get(BASE_URL);
-
     }
 
     @Test
@@ -53,8 +51,7 @@ public class SauceDemoNegativeLoginTest {
         saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
         saucedemoLocatorsPage.logIn(usernameParameter, passwordParameter);
 
-        Assertions.assertTrue(saucedemoLocatorsPage.getErrorMessage(error).contains("Username and password do not match any user in this service"));
-        System.out.println("error message: " + error);
+        Assertions.assertTrue(saucedemoLocatorsPage.getErrorMessage().contains("Username and password do not match any user in this service"));
     }
 
     @After

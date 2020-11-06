@@ -33,8 +33,8 @@ public SaucedemoLocatorsPage logIn (String fillUsername, String fillPasword){
         return this;
     }
 
-    public String getErrorMessage(String error) {
-        String attribute = loginError.getAttribute(error);
+    public String getErrorMessage() {
+        String attribute = loginError.getText();
         return attribute;
     }
 
