@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b67ce56-1c4f-40a2-9af4-c019ccda37fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.~lock.SauceDemoTC - loginP.odt#" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SauceDemoTC - loginP.doc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SauceDemoTC - loginP.odt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Pages/SaucedemoLocatorsPage.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoCartTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoNegativeLoginTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoPositiveLoginTest.class" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SauceDemoTC - loginP.pdf" afterPath="$PROJECT_DIR$/SauceDemoTC - loginP.pdf" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoCartTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoCartTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoNegativeLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoNegativeLoginTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoPositiveLoginTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SaucedemoLocatorsPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/SaucedemoLocatorsPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SwagLabsLocatorsPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/SwagLabsLocatorsPage.java" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoCartTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoNegativeLoginTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoPositiveLoginTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SaucedemoLocatorsPage.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SwagLabsLocatorsPage.class" afterPath="$PROJECT_DIR$/target/test-classes/Pages/SwagLabsLocatorsPage.class" />
+      <change beforePath="$PROJECT_DIR$/.~lock.SauceDemoTC - loginP.odt#" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
