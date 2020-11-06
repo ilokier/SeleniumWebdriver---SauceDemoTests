@@ -1,5 +1,7 @@
-package TestSite;
+package Tests;
 
+import Pages.SaucedemoLocatorsPage;
+import Pages.SwagLabsLocatorsPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +18,7 @@ import java.util.Collection;
 
 @RunWith(Parameterized.class)
 
-public class SauceDemoCartTest {
+public class SauceDemoCartTest extends SauceDemoPositiveLoginTest {
 
     WebDriver driver;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
@@ -47,9 +49,8 @@ public class SauceDemoCartTest {
         driver.get(BASE_URL);
         saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
         swagLabsLocatorsPage = new SwagLabsLocatorsPage(driver);
-        saucedemoLocatorsPage.fillName(usernameParameter)
-                .fillPasword(passwordParameter)
-                .clickLogin();
+        saucedemoLocatorsPage.logIn(usernameParameter, passwordParameter);
+
     }
 
     @Test

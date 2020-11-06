@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b67ce56-1c4f-40a2-9af4-c019ccda37fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoCartTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.~lock.SauceDemoTC - loginP.odt#" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/SauceDemoTC - loginP.doc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/SauceDemoTC - loginP.odt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Pages/SaucedemoLocatorsPage.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoCartTest.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoNegativeLoginTest.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoPositiveLoginTest.class" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SaucedemoLocatorsPage.java" afterPath="$PROJECT_DIR$/src/test/java/TestSite/SaucedemoLocatorsPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SwagLabsLocatorsPage.java" afterPath="$PROJECT_DIR$/src/test/java/TestSite/SwagLabsLocatorsPage.java" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoPositiveLoginTest.class" afterPath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoPositiveLoginTest.class" />
+      <change beforePath="$PROJECT_DIR$/SauceDemoTC - loginP.pdf" afterPath="$PROJECT_DIR$/SauceDemoTC - loginP.pdf" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoCartTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoCartTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoNegativeLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoNegativeLoginTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoPositiveLoginTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SaucedemoLocatorsPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/SaucedemoLocatorsPage.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSite/SwagLabsLocatorsPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/SwagLabsLocatorsPage.java" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoCartTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoNegativeLoginTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SauceDemoPositiveLoginTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SaucedemoLocatorsPage.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSite/SwagLabsLocatorsPage.class" afterPath="$PROJECT_DIR$/target/test-classes/Pages/SwagLabsLocatorsPage.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,38 +52,38 @@
         </entry>
       </file>
       <file leaf-file-name="SauceDemoPositiveLoginTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/SauceDemoPositiveLoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="-90">
+              <caret line="40" column="49" lean-forward="true" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2742#2743#0" expanded="true" />
-                <element signature="e#2771#2772#0" expanded="true" />
+                <element signature="e#2190#2191#0" expanded="true" />
+                <element signature="e#2219#2220#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SauceDemoCartTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SauceDemoCartTest.java">
+      <file leaf-file-name="SauceDemoCartTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/SauceDemoCartTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+            <state relative-caret-position="368">
+              <caret line="64" column="30" lean-forward="false" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2511#2512#0" expanded="true" />
-                <element signature="e#2540#2541#0" expanded="true" />
+                <element signature="e#2557#2558#0" expanded="true" />
+                <element signature="e#2586#2587#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaucedemoLocatorsPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SaucedemoLocatorsPage.java">
+      <file leaf-file-name="SauceDemoNegativeLoginTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/SauceDemoNegativeLoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,14 +92,26 @@
         </entry>
       </file>
       <file leaf-file-name="SwagLabsLocatorsPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SwagLabsLocatorsPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/SwagLabsLocatorsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+            <state relative-caret-position="72">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1533#1534#0" expanded="true" />
-                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1531#1532#0" expanded="true" />
+                <element signature="e#1572#1573#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaucedemoLocatorsPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/SaucedemoLocatorsPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,10 +160,16 @@
         <option value="$PROJECT_DIR$/src/test/java/TestSite/BasePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoLoginTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoNegativeLoginTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSite/SaucedemoLocatorsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSite/SwagLabsLocatorsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoCartTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/SaucedemoLocatorsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/SwagLabsLocatorsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/SauceDemoCartTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/SaucedemoLocatorsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/SauceDemoPositiveLoginTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/SauceDemoNegativeLoginTest.java" />
       </list>
     </option>
   </component>
@@ -148,10 +180,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="-1" />
-    <option name="width" value="1442" />
+    <option name="width" value="1434" />
     <option name="height" value="881" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -186,9 +218,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,6 +238,12 @@
               <item name="Test" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -220,7 +259,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="TestSite" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Test" type="b2602c69:ProjectViewProjectNode" />
@@ -241,15 +288,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../startUsingSeleniumWebDriver-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jdqzl1-oop" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -268,7 +314,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SauceDemoCartTest.WhenItemAddedToCartShouldBeWisibleInCart">
+  <component name="RunManager" selected="JUnit.SauceDemoPositiveLoginTest.WhenAccurateDataPutedShouldLoggin">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -292,15 +338,15 @@
     <configuration name="SauceDemoCartTest.WhenItemAddedToCartShouldBeWisibleInCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="TestSite.*" />
+          <option name="PATTERN" value="Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TestSite" />
-      <option name="MAIN_CLASS_NAME" value="TestSite.SauceDemoCartTest" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SauceDemoCartTest" />
       <option name="METHOD_NAME" value="WhenItemAddedToCartShouldBeWisibleInCart" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -317,15 +363,15 @@
     <configuration name="SauceDemoNegativeLoginTest.GivenIncorrectLoginDataUserShouldNotBeenLogged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="TestSite.*" />
+          <option name="PATTERN" value="Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TestSite" />
-      <option name="MAIN_CLASS_NAME" value="TestSite.SauceDemoNegativeLoginTest" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SauceDemoNegativeLoginTest" />
       <option name="METHOD_NAME" value="GivenIncorrectLoginDataUserShouldNotBeenLogged" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -342,15 +388,15 @@
     <configuration name="SauceDemoPositiveLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="TestSite.*" />
+          <option name="PATTERN" value="Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TestSite" />
-      <option name="MAIN_CLASS_NAME" value="TestSite.SauceDemoPositiveLoginTest" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SauceDemoPositiveLoginTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -367,15 +413,15 @@
     <configuration name="SauceDemoPositiveLoginTest.AddToCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="TestSite.*" />
+          <option name="PATTERN" value="Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TestSite" />
-      <option name="MAIN_CLASS_NAME" value="TestSite.SauceDemoPositiveLoginTest" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SauceDemoPositiveLoginTest" />
       <option name="METHOD_NAME" value="AddToCart" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -392,15 +438,15 @@
     <configuration name="SauceDemoPositiveLoginTest.WhenAccurateDataPutedShouldLoggin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="TestSite.*" />
+          <option name="PATTERN" value="Pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TestSite" />
-      <option name="MAIN_CLASS_NAME" value="TestSite.SauceDemoPositiveLoginTest" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SauceDemoPositiveLoginTest" />
       <option name="METHOD_NAME" value="WhenAccurateDataPutedShouldLoggin" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -483,10 +529,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SauceDemoCartTest.WhenItemAddedToCartShouldBeWisibleInCart" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SauceDemoPositiveLoginTest.WhenAccurateDataPutedShouldLoggin" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SauceDemoPositiveLoginTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SauceDemoNegativeLoginTest.GivenIncorrectLoginDataUserShouldNotBeenLogged" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SauceDemoPositiveLoginTest.WhenAccurateDataPutedShouldLoggin" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SauceDemoNegativeLoginTest.GivenIncorrectLoginDataUserShouldNotBeenLogged" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SauceDemoCartTest.WhenItemAddedToCartShouldBeWisibleInCart" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SauceDemoPositiveLoginTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.SauceDemoPositiveLoginTest.AddToCart" />
       </list>
     </recent_temporary>
@@ -531,8 +577,8 @@
     <history-entry file="SauceDemoCartTest_WhenItemAddedToCartShouldBeWisibleInCart - 2020.10.15 at 10h 29m 55s.xml">
       <configuration name="SauceDemoCartTest.WhenItemAddedToCartShouldBeWisibleInCart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SauceDemoPositiveLoginTest_WhenAccurateDataPutedShouldLoggin - 2020.10.07 at 11h 33m 09s.xml">
-      <configuration name="SauceDemoPositiveLoginTest.WhenAccurateDataPutedShouldLoggin" configurationId="JUnit" />
+    <history-entry file="SauceDemoCartTest_WhenItemAddedToCartShouldBeWisibleInCart - 2020.10.15 at 10h 32m 23s.xml">
+      <configuration name="SauceDemoCartTest.WhenItemAddedToCartShouldBeWisibleInCart" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SauceDemoPositiveLoginTest_WhenAccurateDataPutedShouldLoggin - 2020.10.07 at 12h 03m 53s.xml">
       <configuration name="SauceDemoPositiveLoginTest.WhenAccurateDataPutedShouldLoggin" configurationId="JUnit" />
@@ -557,8 +603,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1442" height="881" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="-1" width="1434" height="881" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -580,9 +625,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.352" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32855093" sideWeight="0.48870057" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.352" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.48870057" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31294963" sideWeight="0.51129943" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -640,7 +685,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/AllegroRegistrationTest.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -766,13 +810,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AllegroSite/Befor.java" />
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/stream/ReferencePipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="417" column="0" lean-forward="false" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/stream/ReferencePipeline.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/GoogleSearchTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/AllegroTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/GoogleLocatorsPage.java" />
@@ -780,16 +818,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/AllegroRegistrationTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/BasePage.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/AllegroLocatorsPage.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SauceDemoNegativeLoginTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="55" column="54" lean-forward="false" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -798,48 +826,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SauceDemoPositiveLoginTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/SwagLabsLocatorsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="82" selection-end-column="5" />
+        <state relative-caret-position="72">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2742#2743#0" expanded="true" />
-            <element signature="e#2771#2772#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SaucedemoLocatorsPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/SaucedemoLocatorsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SwagLabsLocatorsPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/SauceDemoCartTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+        <state relative-caret-position="368">
+          <caret line="64" column="30" lean-forward="false" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1533#1534#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestSite/SauceDemoCartTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/SauceDemoPositiveLoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+        <state relative-caret-position="-90">
+          <caret line="40" column="49" lean-forward="true" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-            <element signature="e#2540#2541#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2219#2220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/SauceDemoNegativeLoginTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

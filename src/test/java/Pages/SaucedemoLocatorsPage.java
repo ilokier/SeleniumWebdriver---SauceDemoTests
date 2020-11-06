@@ -1,4 +1,4 @@
-package TestSite;
+package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,18 +26,9 @@ public class SaucedemoLocatorsPage {
 
 
 
-
-    public SaucedemoLocatorsPage fillName(String fillUsername) {
+public SaucedemoLocatorsPage logIn (String fillUsername, String fillPasword){
         username.sendKeys(fillUsername);
-        return this;
-    }
-
-    public SaucedemoLocatorsPage fillPasword(String fillPasword) {
         password.sendKeys(fillPasword);
-        return this;
-    }
-
-    public SaucedemoLocatorsPage clickLogin() {
         loginButton.click();
         return this;
     }

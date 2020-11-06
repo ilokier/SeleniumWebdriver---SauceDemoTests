@@ -1,5 +1,7 @@
-package TestSite;
+package Tests;
 
+import Pages.SaucedemoLocatorsPage;
+import Pages.SwagLabsLocatorsPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +38,6 @@ public class SauceDemoPositiveLoginTest {
     public static Collection<Object[]> dataForRegistration() {
         return Arrays.asList(new Object[][]{
                 {"standard_user", "secret_sauce"},
-                {"locked_out_user", "secret_sauce"},
                 {"problem_user", "secret_sauce"},
                 {"performance_glitch_user", "secret_sauce"},
         });
@@ -55,22 +56,8 @@ public class SauceDemoPositiveLoginTest {
     public void WhenAccurateDataPutedShouldLoggin() {
         saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
         swagLabsLocatorsPage = new SwagLabsLocatorsPage(driver);
-        saucedemoLocatorsPage.fillName(usernameParameter)
-                .fillPasword(passwordParameter)
-                .clickLogin();
-        String pageTitle = driver.getTitle();
+        saucedemoLocatorsPage.logIn(usernameParameter, passwordParameter);
         Assertions.assertEquals(driver.getTitle(), "Swag Labs");
-        System.out.println("Actual page title: " + pageTitle);
-
-        swagLabsLocatorsPage.pickBackpack();
-        swagLabsLocatorsPage.addBackpackToCart();
-        swagLabsLocatorsPage.goToCart();
-
-        String cartItem = swagLabsLocatorsPage.getItemText();
-
-        Assertions.assertEquals(cartItem, "Sauce Labs Backpack");
-        System.out.println("item name is: " + cartItem);
-        swagLabsLocatorsPage.removeItemFromCart();
     }
 
     @After

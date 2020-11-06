@@ -1,5 +1,6 @@
-package TestSite;
+package Tests;
 
+import Pages.SaucedemoLocatorsPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,6 +19,7 @@ import java.util.Collection;
 
 public class SauceDemoNegativeLoginTest {
     private WebDriver driver;
+    String error;
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
     protected final static String BASE_URL = "https://www.saucedemo.com/";
 
@@ -31,7 +33,7 @@ public class SauceDemoNegativeLoginTest {
     public static Collection<Object[]> dataForNegaitveRegistration() {
         return Arrays.asList(new Object[][]{
                 {"incorrect_login", "secret_sauce"},
-                {"locked_out_user", "incerrect_password"},
+                {"locked_out_user", "incerrect_password"},git
                 {"incorrect_login", "incerrect_password"}
         });
     }
@@ -49,13 +51,10 @@ public class SauceDemoNegativeLoginTest {
     @Test
     public void GivenIncorrectLoginDataUserShouldNotBeenLogged() {
         saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
-        saucedemoLocatorsPage.fillName(usernameParameter)
-                .fillPasword(passwordParameter)
-                .clickLogin();
+        saucedemoLocatorsPage.logIn(usernameParameter, passwordParameter);
 
-        String attribute = saucedemoLocatorsPage.loginError.getText();
-        Assertions.assertTrue(attribute.contains("Username and password do not match any user in this service"));
-        System.out.println("error message: " + attribute);
+        Assertions.assertTrue(saucedemoLocatorsPage.getErrorMessage(error).contains("Username and password do not match any user in this service"));
+        System.out.println("error message: " + error);
     }
 
     @After
