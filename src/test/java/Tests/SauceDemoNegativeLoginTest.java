@@ -1,15 +1,11 @@
 package Tests;
 
 import Pages.SaucedemoLocatorsPage;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.Arrays;
@@ -17,12 +13,11 @@ import java.util.Collection;
 
 @RunWith(Parameterized.class)
 
-public class SauceDemoNegativeLoginTest {
-    private WebDriver driver;
+public class SauceDemoNegativeLoginTest extends TestBase{
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
-    protected final static String BASE_URL = "https://www.saucedemo.com/";
 
-    //dane do rejestracji
+
+    //login data
     @Parameterized.Parameter(0)
     public String usernameParameter;
     @Parameterized.Parameter(1)
@@ -37,26 +32,14 @@ public class SauceDemoNegativeLoginTest {
         });
     }
 
-    @Before
-    public void Setup() {
-        System.setProperty("webdriver.chrome.driver", "/home/lonia/Pulpit/szkolenia, materiały/projekty/Test/src/main/resources/drivers/chromedriver");
-        driver = new ChromeDriver();
-        PageFactory.initElements(driver, this);
-        driver.manage().window().maximize();
-        driver.get(BASE_URL);
-    }
-
     @Test
     public void GivenIncorrectLoginDataUserShouldNotBeenLogged() {
-        saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
-        saucedemoLocatorsPage.logIn(usernameParameter, passwordParameter);
+        saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
+        saucedemoLocatorsPage.fillUsername(usernameParameter);
+        saucedemoLocatorsPage.fillPassword(passwordParameter);
+        saucedemoLocatorsPage.clickLoginButton();
 
         Assertions.assertTrue(saucedemoLocatorsPage.getErrorMessage().contains("Username and password do not match any user in this service"));
     }
-
-    @After
-    public void Quit() {
-        driver.quit();
-    }
-
 }
+

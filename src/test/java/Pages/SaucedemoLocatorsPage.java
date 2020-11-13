@@ -6,31 +6,33 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SaucedemoLocatorsPage {
-    private WebDriver driver;
+   // private WebDriver driver;
 
-    //konstruktor
+    //constructor
     public SaucedemoLocatorsPage(WebDriver driver) {
-        this.driver = driver;
+        //this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    //lokalizatory
+    //localizators
     @FindBy(xpath = "//input[@id = 'user-name']")
-    WebElement username;
+    private static WebElement username;
     @FindBy(xpath = "//input[@id = 'password']")
-    WebElement password;
+    private static WebElement password;
     @FindBy(xpath = "//input[@id = 'login-button']")
-    WebElement loginButton;
+    private static WebElement loginButton;
     @FindBy(xpath = "//h3[contains(@data-test, 'error')]")
-    WebElement loginError;
+    private static WebElement loginError;
 
 
-
-public SaucedemoLocatorsPage logIn (String fillUsername, String fillPasword){
-        username.sendKeys(fillUsername);
-        password.sendKeys(fillPasword);
+    public void fillUsername(String userName){
+        username.sendKeys(userName);
+    }
+    public void fillPassword(String passWord){
+        password.sendKeys(passWord);
+    }
+    public void clickLoginButton(){
         loginButton.click();
-        return this;
     }
 
     public String getErrorMessage() {

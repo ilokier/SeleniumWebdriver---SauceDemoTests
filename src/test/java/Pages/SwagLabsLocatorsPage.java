@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SwagLabsLocatorsPage {
-    private WebDriver driver;
+    //private static WebDriver driver;
 
 
     public SwagLabsLocatorsPage(WebDriver driver) {
-        this.driver = driver;
+        // this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -21,6 +21,8 @@ public class SwagLabsLocatorsPage {
     WebElement addBackpackToCartButton;
     @FindBy(css = "svg[data-prefix='fas']")
     WebElement cart;
+    @FindBy(xpath = "//img[@src='./img/sauce-backpack-1200x1500.jpg']")
+    WebElement itemImage;
     //cart
     @FindBy(xpath = "//div[@class = 'inventory_item_name']")
     WebElement cartInventoryItem;
@@ -54,9 +56,15 @@ public class SwagLabsLocatorsPage {
         removeButton.click();
         return this;
     }
-    public String checkIfCartIsEmpty(){
-     return cartItemsCounter.getText();
+
+    public String checkIfCartIsEmpty() {
+        return cartItemsCounter.getText();
     }
+
+    public boolean isItemImageVisible(){
+        return itemImage.isDisplayed();
+    }
+
 }
 
 //todo add localizators, create tests

@@ -2,32 +2,24 @@ package Tests;
 
 import Pages.SaucedemoLocatorsPage;
 import Pages.SwagLabsLocatorsPage;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
 
-public class SauceDemoCartTest extends SauceDemoPositiveLoginTest {
-
-    WebDriver driver;
+public class SauceDemoCartTest extends TestBase{
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
     private SwagLabsLocatorsPage swagLabsLocatorsPage;
-    private WebDriverWait wait;
-    private SwagLabsLocatorsPage cartItem;
-    protected final static String BASE_URL = "https://www.saucedemo.com/";
 
-    //dane do rejestracji
+
+
+    //login data
     @Parameterized.Parameter(0)
     public String usernameParameter;
     @Parameterized.Parameter(1)
@@ -40,21 +32,14 @@ public class SauceDemoCartTest extends SauceDemoPositiveLoginTest {
         });
     }
 
-    @Before
-    public void Setup() {
-        System.setProperty("webdriver.chrome.driver", "/home/lonia/Pulpit/szkolenia, materiały/projekty/Test/src/main/resources/drivers/chromedriver");
-        driver = new ChromeDriver();
-        PageFactory.initElements(driver, this);
-        driver.manage().window().maximize();
-        driver.get(BASE_URL);
-        saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
-        swagLabsLocatorsPage = new SwagLabsLocatorsPage(driver);
-        saucedemoLocatorsPage.logIn(usernameParameter, passwordParameter);
-
-    }
 
     @Test
     public void WhenItemAddedToCartShouldBeWisibleInCart() {
+        saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
+        swagLabsLocatorsPage = PageFactory.initElements(driver, SwagLabsLocatorsPage.class);
+        saucedemoLocatorsPage.fillUsername(usernameParameter);
+        saucedemoLocatorsPage.fillPassword(passwordParameter);
+        saucedemoLocatorsPage.clickLoginButton();
         swagLabsLocatorsPage.pickBackpack();
         swagLabsLocatorsPage.addBackpackToCart();
         swagLabsLocatorsPage.goToCart();
@@ -67,6 +52,11 @@ public class SauceDemoCartTest extends SauceDemoPositiveLoginTest {
 
     @Test
     public void WhenItemRemovedCasrtShouldBeEmpty() {
+        saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
+        swagLabsLocatorsPage = PageFactory.initElements(driver, SwagLabsLocatorsPage.class);
+        saucedemoLocatorsPage.fillUsername(usernameParameter);
+        saucedemoLocatorsPage.fillPassword(passwordParameter);
+        saucedemoLocatorsPage.clickLoginButton();
         swagLabsLocatorsPage.pickBackpack();
         swagLabsLocatorsPage.addBackpackToCart();
         swagLabsLocatorsPage.goToCart();
@@ -74,10 +64,6 @@ public class SauceDemoCartTest extends SauceDemoPositiveLoginTest {
         Assertions.assertTrue(swagLabsLocatorsPage.checkIfCartIsEmpty().isEmpty());
     }
 
-    @After
-    public void quitBrowser() {
-        driver.quit();
-    }
 
 
 }
