@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b67ce56-1c4f-40a2-9af4-c019ccda37fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Tests/CustomListener.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoInventoryTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_78.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_no_aop_4_2_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_2_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_2_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_3_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_21.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/InventoryScreen.odt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SauceDemoTC - Cart.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SauceDemoTC - loginN.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SauceDemoTC - loginP.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Test.iml" afterPath="$PROJECT_DIR$/Test.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/SwagLabsLocatorsPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/SwagLabsLocatorsPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoCartTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoCartTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoNegativeLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoNegativeLoginTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoPositiveLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/SauceDemoPositiveLoginTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/TestBase.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestBase.java" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/SwagLabsLocatorsPage.class" afterPath="$PROJECT_DIR$/target/test-classes/Pages/SwagLabsLocatorsPage.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoCartTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoNegativeLoginTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/SauceDemoPositiveLoginTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/TestBase.class" afterPath="" />
-    </list>
+    <list default="true" id="0b67ce56-1c4f-40a2-9af4-c019ccda37fb" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -214,7 +179,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
     <option name="y" value="-1" />
     <option name="width" value="1434" />
@@ -661,7 +626,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1442" height="881" extended-state="7" />
+    <frame x="-1" y="-1" width="1442" height="881" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
