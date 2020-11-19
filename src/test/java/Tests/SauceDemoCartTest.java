@@ -2,70 +2,57 @@ package Tests;
 
 import Pages.SaucedemoLocatorsPage;
 import Pages.SwagLabsLocatorsPage;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 
-import java.util.Arrays;
-import java.util.Collection;
-
-@RunWith(Parameterized.class)
+@Listeners({CustomListener.class})
 
 public class SauceDemoCartTest extends TestBase{
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
     private SwagLabsLocatorsPage swagLabsLocatorsPage;
 
 
-
-    //login data
-    @Parameterized.Parameter(0)
-    public String usernameParameter;
-    @Parameterized.Parameter(1)
-    public String passwordParameter;
-
-    @Parameterized.Parameters(name = "Test {index}: username: {0}, password: {1}")
-    public static Collection<Object[]> dataForRegistration() {
-        return Arrays.asList(new Object[][]{
+    @DataProvider(name = "data-provider")
+    public Object [][] dataForRegistration() {
+        return new Object[][] {
                 {"standard_user", "secret_sauce"},
-        });
+                {"problem_user", "secret_sauce"},
+                {"performance_glitch_user", "secret_sauce"}
+
+        };
     }
 
-
-    @Test
-    public void WhenItemAddedToCartShouldBeWisibleInCart() {
+    @org.testng.annotations.Test(dataProvider = "data-provider")
+    public void WhenItemAddedToCartShouldBeWisibleInCart(String username, String password) {
         saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
         swagLabsLocatorsPage = PageFactory.initElements(driver, SwagLabsLocatorsPage.class);
-        saucedemoLocatorsPage.fillUsername(usernameParameter);
-        saucedemoLocatorsPage.fillPassword(passwordParameter);
+        saucedemoLocatorsPage.fillUsername(username);
+        saucedemoLocatorsPage.fillPassword(password);
         saucedemoLocatorsPage.clickLoginButton();
         swagLabsLocatorsPage.pickBackpack();
         swagLabsLocatorsPage.addBackpackToCart();
         swagLabsLocatorsPage.goToCart();
 
         String cartItem = swagLabsLocatorsPage.getItemText();
-        Assertions.assertEquals(cartItem, "Sauce Labs Backpack");
+        Assert.assertEquals(cartItem, "Sauce Labs Backpack");
         System.out.println("item name is: " + cartItem);
-
     }
 
-    @Test
-    public void WhenItemRemovedCasrtShouldBeEmpty() {
+    @org.testng.annotations.Test (dataProvider = "data-provider")
+    public void WhenItemRemovedCasrtShouldBeEmpty(String username, String password) {
         saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
         swagLabsLocatorsPage = PageFactory.initElements(driver, SwagLabsLocatorsPage.class);
-        saucedemoLocatorsPage.fillUsername(usernameParameter);
-        saucedemoLocatorsPage.fillPassword(passwordParameter);
+        saucedemoLocatorsPage.fillUsername(username);
+        saucedemoLocatorsPage.fillPassword(password);
         saucedemoLocatorsPage.clickLoginButton();
         swagLabsLocatorsPage.pickBackpack();
         swagLabsLocatorsPage.addBackpackToCart();
         swagLabsLocatorsPage.goToCart();
         swagLabsLocatorsPage.removeItemFromCart();
-        Assertions.assertTrue(swagLabsLocatorsPage.checkIfCartIsEmpty().isEmpty());
+        Assert.assertTrue(swagLabsLocatorsPage.checkIfCartIsEmpty().isEmpty());
     }
-
-
-
 }
 
 

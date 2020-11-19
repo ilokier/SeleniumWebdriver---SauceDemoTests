@@ -21,7 +21,7 @@ public class SwagLabsLocatorsPage {
     WebElement addBackpackToCartButton;
     @FindBy(css = "svg[data-prefix='fas']")
     WebElement cart;
-    @FindBy(xpath = "//img[@src='./img/sauce-backpack-1200x1500.jpg']")
+    @FindBy(xpath = "//a[@id='item_4_img_link']/img")
     WebElement itemImage;
     //cart
     @FindBy(xpath = "//div[@class = 'inventory_item_name']")
@@ -61,8 +61,8 @@ public class SwagLabsLocatorsPage {
         return cartItemsCounter.getText();
     }
 
-    public boolean isItemImageVisible(){
-        return itemImage.isDisplayed();
+    public String imageValue(){
+        return itemImage.getAttribute("src");
     }
 
 }

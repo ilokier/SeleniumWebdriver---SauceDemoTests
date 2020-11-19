@@ -1,45 +1,33 @@
 package Tests;
 
 import Pages.SaucedemoLocatorsPage;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 
-import java.util.Arrays;
-import java.util.Collection;
-
-@RunWith(Parameterized.class)
+@Listeners({CustomListener.class})
 
 public class SauceDemoNegativeLoginTest extends TestBase{
     private SaucedemoLocatorsPage saucedemoLocatorsPage;
 
-
-    //login data
-    @Parameterized.Parameter(0)
-    public String usernameParameter;
-    @Parameterized.Parameter(1)
-    public String passwordParameter;
-
-    @Parameters(name = "Test {index}:, username: {0}, password: {1}")
-    public static Collection<Object[]> dataForNegaitveRegistration() {
-        return Arrays.asList(new Object[][]{
-                {"standard_user", "invalid_password"},
+    @DataProvider(name = "data-provider")
+    public Object [][] dataForRegistration() {
+        return new Object[][] {
+                {"standard_user", "incorrect_password"},
                 {"invalid_user", "secret_sauce"},
                 {"invalid_user", "invalid_password"}
-        });
+        };
     }
 
-    @Test
-    public void GivenIncorrectLoginDataUserShouldNotBeenLogged() {
+    @org.testng.annotations.Test(dataProvider = "data-provider")
+    public void GivenIncorrectLoginDataUserShouldNotBeenLogedIn(String username, String password) {
         saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
-        saucedemoLocatorsPage.fillUsername(usernameParameter);
-        saucedemoLocatorsPage.fillPassword(passwordParameter);
+        saucedemoLocatorsPage.fillUsername(username);
+        saucedemoLocatorsPage.fillPassword(password);
         saucedemoLocatorsPage.clickLoginButton();
 
-        Assertions.assertTrue(saucedemoLocatorsPage.getErrorMessage().contains("Username and password do not match any user in this service"));
+        Assert.assertTrue(saucedemoLocatorsPage.getErrorMessage().contains("Username and password do not match any user in this service"));
     }
 }
 

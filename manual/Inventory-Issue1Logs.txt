@@ -1,0 +1,128 @@
+09:41:33.328 Navigated to https://www.saucedemo.com/
+09:41:40.344 Navigated to https://www.saucedemo.com/inventory.html
+09:41:40.660 sauce-backpack-1200x1500.jpgWithGarbageOnItToBreakTheUrl:1 GET https://www.saucedemo.com/img/sauce-backpack-1200x1500.jpgWithGarbageOnItToBreakTheUrl 404
+Image (async)
+wt @ main.js:27
+qi @ main.js:27
+Hi @ main.js:27
+Yi @ main.js:27
+Mo @ main.js:27
+Po @ main.js:27
+To @ main.js:27
+Qi @ main.js:27
+Bo @ main.js:27
+Ro @ main.js:27
+Ho.render @ main.js:27
+(anonymous) @ main.js:27
+zo @ main.js:27
+$o @ main.js:27
+render @ main.js:27
+(anonymous) @ main.js:39
+n @ main.js:1
+(anonymous) @ main.js:1
+(anonymous) @ main.js:1
+09:41:40.665 bike-light-1200x1500.jpgWithGarbageOnItToBreakTheUrl:1 GET https://www.saucedemo.com/img/bike-light-1200x1500.jpgWithGarbageOnItToBreakTheUrl 404
+Image (async)
+wt @ main.js:27
+qi @ main.js:27
+Hi @ main.js:27
+Yi @ main.js:27
+Mo @ main.js:27
+Po @ main.js:27
+To @ main.js:27
+Qi @ main.js:27
+Bo @ main.js:27
+Ro @ main.js:27
+Ho.render @ main.js:27
+(anonymous) @ main.js:27
+zo @ main.js:27
+$o @ main.js:27
+render @ main.js:27
+(anonymous) @ main.js:39
+n @ main.js:1
+(anonymous) @ main.js:1
+(anonymous) @ main.js:1
+09:41:40.671 bolt-shirt-1200x1500.jpgWithGarbageOnItToBreakTheUrl:1 GET https://www.saucedemo.com/img/bolt-shirt-1200x1500.jpgWithGarbageOnItToBreakTheUrl 404
+Image (async)
+wt @ main.js:27
+qi @ main.js:27
+Hi @ main.js:27
+Yi @ main.js:27
+Mo @ main.js:27
+Po @ main.js:27
+To @ main.js:27
+Qi @ main.js:27
+Bo @ main.js:27
+Ro @ main.js:27
+Ho.render @ main.js:27
+(anonymous) @ main.js:27
+zo @ main.js:27
+$o @ main.js:27
+render @ main.js:27
+(anonymous) @ main.js:39
+n @ main.js:1
+(anonymous) @ main.js:1
+(anonymous) @ main.js:1
+09:41:40.675 sauce-pullover-1200x1500.jpgWithGarbageOnItToBreakTheUrl:1 GET https://www.saucedemo.com/img/sauce-pullover-1200x1500.jpgWithGarbageOnItToBreakTheUrl 404
+Image (async)
+wt @ main.js:27
+qi @ main.js:27
+Hi @ main.js:27
+Yi @ main.js:27
+Mo @ main.js:27
+Po @ main.js:27
+To @ main.js:27
+Qi @ main.js:27
+Bo @ main.js:27
+Ro @ main.js:27
+Ho.render @ main.js:27
+(anonymous) @ main.js:27
+zo @ main.js:27
+$o @ main.js:27
+render @ main.js:27
+(anonymous) @ main.js:39
+n @ main.js:1
+(anonymous) @ main.js:1
+(anonymous) @ main.js:1
+09:41:40.679 red-onesie-1200x1500.jpgWithGarbageOnItToBreakTheUrl:1 GET https://www.saucedemo.com/img/red-onesie-1200x1500.jpgWithGarbageOnItToBreakTheUrl 404
+Image (async)
+wt @ main.js:27
+qi @ main.js:27
+Hi @ main.js:27
+Yi @ main.js:27
+Mo @ main.js:27
+Po @ main.js:27
+To @ main.js:27
+Qi @ main.js:27
+Bo @ main.js:27
+Ro @ main.js:27
+Ho.render @ main.js:27
+(anonymous) @ main.js:27
+zo @ main.js:27
+$o @ main.js:27
+render @ main.js:27
+(anonymous) @ main.js:39
+n @ main.js:1
+(anonymous) @ main.js:1
+(anonymous) @ main.js:1
+09:41:40.692 red-tatt-1200x1500.jpgWithGarbageOnItToBreakTheUrl:1 GET https://www.saucedemo.com/img/red-tatt-1200x1500.jpgWithGarbageOnItToBreakTheUrl 404
+Image (async)
+wt @ main.js:27
+qi @ main.js:27
+Hi @ main.js:27
+Yi @ main.js:27
+Mo @ main.js:27
+Po @ main.js:27
+To @ main.js:27
+Qi @ main.js:27
+Bo @ main.js:27
+Ro @ main.js:27
+Ho.render @ main.js:27
+(anonymous) @ main.js:27
+zo @ main.js:27
+$o @ main.js:27
+render @ main.js:27
+(anonymous) @ main.js:39
+n @ main.js:1
+(anonymous) @ main.js:1
+(anonymous) @ main.js:1
