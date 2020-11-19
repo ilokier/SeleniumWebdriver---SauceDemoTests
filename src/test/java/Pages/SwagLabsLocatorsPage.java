@@ -6,15 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SwagLabsLocatorsPage {
-    //private static WebDriver driver;
-
 
     public SwagLabsLocatorsPage(WebDriver driver) {
-        // this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    // @FindBy(xpath = "//a[@id='item_4_title_link']")
     @FindBy(linkText = "Sauce Labs Backpack")
     WebElement backpackItem;
     @FindBy(xpath = "//button[@class='btn_primary btn_inventory']")
@@ -23,13 +19,6 @@ public class SwagLabsLocatorsPage {
     WebElement cart;
     @FindBy(xpath = "//a[@id='item_4_img_link']/img")
     WebElement itemImage;
-    //cart
-    @FindBy(xpath = "//div[@class = 'inventory_item_name']")
-    WebElement cartInventoryItem;
-    @FindBy(xpath = "//button[@class='btn_secondary cart_button']")
-    WebElement removeButton;
-    @FindBy(id = "shopping_cart_container")
-    WebElement cartItemsCounter;
 
 
     public SwagLabsLocatorsPage pickBackpack() {
@@ -47,26 +36,12 @@ public class SwagLabsLocatorsPage {
         return this;
     }
 
-    public String getItemText() {
-        return cartInventoryItem.getText();
 
-    }
-
-    public SwagLabsLocatorsPage removeItemFromCart() {
-        removeButton.click();
-        return this;
-    }
-
-    public String checkIfCartIsEmpty() {
-        return cartItemsCounter.getText();
-    }
-
-    public String imageValue(){
+    public String imageValue() {
         return itemImage.getAttribute("src");
     }
 
 }
 
-//todo add localizators, create tests
 
 

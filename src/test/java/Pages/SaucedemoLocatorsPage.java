@@ -6,15 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SaucedemoLocatorsPage {
-   // private WebDriver driver;
 
-    //constructor
     public SaucedemoLocatorsPage(WebDriver driver) {
-        //this.driver = driver;
-        PageFactory.initElements(driver, this);
+       PageFactory.initElements(driver, this);
     }
 
-    //localizators
     @FindBy(xpath = "//input[@id = 'user-name']")
     private static WebElement username;
     @FindBy(xpath = "//input[@id = 'password']")
