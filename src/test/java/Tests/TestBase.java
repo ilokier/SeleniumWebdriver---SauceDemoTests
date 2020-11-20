@@ -1,5 +1,6 @@
 package Tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,7 +14,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestBase {
-    public static WebDriver driver;
+   public static WebDriver driver;
+
     final static String BASE_URL = "https://www.saucedemo.com/";
 
     @BeforeMethod
@@ -29,7 +31,8 @@ public class TestBase {
 
 
     public static void initialize() {
-        System.setProperty("webdriver.chrome.driver", "/home/lonia/Pulpit/szkolenia, materiały/projekty/SauceDemoTest/src/main/resources/drivers/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "/home/lonia/Pulpit/szkolenia, materiały/projekty/SauceDemoTest/src/main/resources/drivers/chromedriver");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BASE_URL);

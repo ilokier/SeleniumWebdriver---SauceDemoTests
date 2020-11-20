@@ -7,8 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SaucedemoLocatorsPage {
 
+
     public SaucedemoLocatorsPage(WebDriver driver) {
-       PageFactory.initElements(driver, this);
+        //this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//input[@id = 'user-name']")
