@@ -18,11 +18,10 @@ public class CustomListener extends TestBase implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        System.out.println("Test failed: "+result.getName());
+        System.out.println("Test failed: " + result.getName());
         capture(result.getMethod().getMethodName());
 
-        }
-
+    }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {

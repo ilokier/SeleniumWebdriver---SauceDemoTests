@@ -36,7 +36,6 @@ public class SwagLabsLocatorsPage {
         return this;
     }
 
-
     public String imageValue() {
         return itemImage.getAttribute("src");
     }

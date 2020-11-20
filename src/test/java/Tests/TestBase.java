@@ -14,24 +14,21 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestBase {
-   public static WebDriver driver;
-
+    public static WebDriver driver;
     final static String BASE_URL = "https://www.saucedemo.com/";
 
     @BeforeMethod
-    public void setUp(){
-        PageFactory.initElements(driver,this);
+    public void setUp() {
+        PageFactory.initElements(driver, this);
         initialize();
-
     }
+
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 
-
     public static void initialize() {
-        //System.setProperty("webdriver.chrome.driver", "/home/lonia/Pulpit/szkolenia, materiały/projekty/SauceDemoTest/src/main/resources/drivers/chromedriver");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -45,13 +42,8 @@ public class TestBase {
         try {
             FileUtils.copyFile(source, target);
 
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 }
-
-///home/lonia/Pulpit/szkolenia, materiały/projekty/SauceDemoTest/screenshots/

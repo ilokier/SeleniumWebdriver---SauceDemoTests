@@ -7,9 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SauceDemoCartPage {
 
-public SauceDemoCartPage(WebDriver driver){
-    PageFactory.initElements(driver, this);
-}
+    public SauceDemoCartPage(WebDriver driver) { PageFactory.initElements(driver, this);
+    }
 
     @FindBy(xpath = "//div[@class = 'inventory_item_name']")
     WebElement cartInventoryItem;

@@ -7,9 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SaucedemoLocatorsPage {
 
-
     public SaucedemoLocatorsPage(WebDriver driver) {
-        //this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -23,14 +21,12 @@ public class SaucedemoLocatorsPage {
     private static WebElement loginError;
 
 
-    public void fillUsername(String userName){
+
+    public SaucedemoLocatorsPage logIn(String userName, String passWord) {
         username.sendKeys(userName);
-    }
-    public void fillPassword(String passWord){
         password.sendKeys(passWord);
-    }
-    public void clickLoginButton(){
         loginButton.click();
+        return this;
     }
 
     public String getErrorMessage() {
