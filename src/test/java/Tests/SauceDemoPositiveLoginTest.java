@@ -15,20 +15,20 @@ import static org.hamcrest.Matchers.is;
 public class SauceDemoPositiveLoginTest extends TestBase {
     private static Logger log = LoggerFactory.getLogger("SauceDemoInventoryTest.class");
 
-    @DataProvider(name = "data-provider2")
+    @DataProvider(name = "data-provider")
     public Object[][] dataForRegistration() {
         return new Object[][]{
-                {getProperty("standard_username"), getProperty("password")},
-                {getProperty("problem_username"), getProperty("password")},
-                {getProperty("performance_username"), getProperty("password")}
+                {getProperty("standard_username")},
+                {getProperty("problem_username")},
+                {getProperty("performance_username")}
 
         };
 
     }
 
-    @Test(dataProvider = "data-provider2")
-    public void WhenUserIsLoggedInItemsShouldBeVisible(String username, String password) {
-        swagLabsLocatorsPage = saucedemoLocatorsPage.logIn(username, password);
+    @Test(dataProvider = "data-provider")
+    public void WhenUserIsLoggedInHeaderShouldDisplayProperTitle(String username) {
+        swagLabsLocatorsPage = saucedemoLocatorsPage.logIn(username, getProperty("password"));
         String title = (swagLabsLocatorsPage.getHeaderTitle());
         swagLabsLocatorsPage.logOut();
         assertThat(title, is(getProperty("headerTitle")));
