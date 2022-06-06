@@ -25,6 +25,8 @@ public class SauceDemoCartTest extends TestBase {
         String cartItem = sauceDemoCartPage.getItemText();
         Assert.assertEquals(cartItem, "Sauce Labs Backpack");
         System.out.println("item name is: " + cartItem);
+        System.out.println("item name is: " + cartItem);
+
     }
 
     @Test(dataProvider = "data-provider")
