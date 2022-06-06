@@ -8,11 +8,14 @@ public class CustomListener extends TestBase implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
+        System.out.println("Im starting test: " + iTestResult.getName());
+
 
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
+        System.out.println("Test: " + "\"" + iTestResult.getName() + "\"" + " passed!");
 
     }
 

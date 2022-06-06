@@ -3,22 +3,29 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class SwagLabsLocatorsPage {
+public class SwagLabsLocatorsPage extends BasePage {
+    private static Logger log = LoggerFactory.getLogger("SwagLabsLocatorsPage.class");
+    @FindBy(linkText = "Sauce Labs Backpack")
+    private WebElement backpackItem;
+    @FindBy(xpath = "//button[@class='btn_primary btn_inventory']")
+    private WebElement addBackpackToCartButton;
+    @FindBy(css = "svg[data-prefix='fas']")
+    private WebElement cart;
+    @FindBy(xpath = "//a[@id='item_4_img_link']/img")
+    private WebElement itemImage;
+    @FindBy(css = "#react-burger-menu-btn")
+    private WebElement burgerMenu;
+    @FindBy(css = "#logout_sidebar_link")
+    private WebElement logOut;
+    @FindBy(css = ".title")
+    private WebElement headerTitle;
 
     public SwagLabsLocatorsPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
-
-    @FindBy(linkText = "Sauce Labs Backpack")
-    WebElement backpackItem;
-    @FindBy(xpath = "//button[@class='btn_primary btn_inventory']")
-    WebElement addBackpackToCartButton;
-    @FindBy(css = "svg[data-prefix='fas']")
-    WebElement cart;
-    @FindBy(xpath = "//a[@id='item_4_img_link']/img")
-    WebElement itemImage;
 
 
     public SwagLabsLocatorsPage pickBackpack() {
@@ -40,6 +47,17 @@ public class SwagLabsLocatorsPage {
         return itemImage.getAttribute("src");
     }
 
+    public void logOut() {
+        burgerMenu.click();
+        waitForElement(logOut);
+        logOut.click();
+    }
+
+    public String getHeaderTitle() {
+        String header = headerTitle.getText();
+        log.info("Header title is: " + header);
+        return header;
+    }
 }
 
 

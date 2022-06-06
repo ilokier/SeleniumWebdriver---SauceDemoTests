@@ -1,34 +1,36 @@
 package Tests;
 
-import Pages.SaucedemoLocatorsPage;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class SauceDemoPositiveLoginTest extends TestBase {
-    SaucedemoLocatorsPage saucedemoLocatorsPage;
+import static java.lang.System.getProperty;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
-    @DataProvider(name = "data-provider")
+@Listeners({CustomListener.class})
+
+public class SauceDemoPositiveLoginTest extends TestBase {
+    private static Logger log = LoggerFactory.getLogger("SauceDemoInventoryTest.class");
+
+    @DataProvider(name = "data-provider2")
     public Object[][] dataForRegistration() {
         return new Object[][]{
-                {"standard_user", "secret_sauce"},
-                {"problem_user", "secret_sauce"},
-                {"performance_glitch_user", "secret_sauce"}
+                {getProperty("standard_username"), getProperty("password")},
+                {getProperty("problem_username"), getProperty("password")},
+                {getProperty("performance_username"), getProperty("password")}
+
         };
+
     }
 
-    @BeforeMethod
-    void beforeMethod() {
-        saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
+    @Test(dataProvider = "data-provider2")
+    public void WhenUserIsLoggedInItemsShouldBeVisible(String username, String password) {
+        swagLabsLocatorsPage = saucedemoLocatorsPage.logIn(username, password);
+        String title = (swagLabsLocatorsPage.getHeaderTitle());
+        swagLabsLocatorsPage.logOut();
+        assertThat(title, is(getProperty("headerTitle")));
     }
-
-    @Test(dataProvider = "data-provider")
-    public void WhenAccurateDataPutShouldLogin(String username, String password) {
-        saucedemoLocatorsPage = PageFactory.initElements(driver, SaucedemoLocatorsPage.class);
-        saucedemoLocatorsPage.logIn(username, password);
-        Assert.assertEquals(driver.getTitle(), "Swag Labs");
-    }
-
 }
