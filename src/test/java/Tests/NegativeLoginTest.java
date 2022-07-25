@@ -27,7 +27,7 @@ public class NegativeLoginTest extends TestBase {
     }
 
     @Test(dataProvider = "data-provider")
-    public void GivenIncorrectLoginDataUserShouldNotBeenLoggedIn(String username, String password) {
+    public void GivenIncorrectLoginDataShouldShowErrorMessage(String username, String password) {
         loginPage
                 .logIn(username, password);
         assertThat(loginPage.getErrorMessage(), is(getProperty("bad_credentials_message")));

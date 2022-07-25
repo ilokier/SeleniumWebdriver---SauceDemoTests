@@ -20,9 +20,6 @@ public class CartPage {
 
     @FindBy(css = ".cart_item")
     List<WebElement> cartInventoryItem;
-    @FindBy(id = "shopping_cart_container")
-    WebElement cartItemsCounter;
-
 
     public List<String> getItemList() {
         List<String> productNames = cartInventoryItem.stream()

@@ -9,8 +9,7 @@ import org.slf4j.LoggerFactory;
 
 public class ProductDetailPage {
     private static Logger log = LoggerFactory.getLogger("ProductDetailPage.class");
-
-
+    
     public ProductDetailPage(WebElement item) {
         PageFactory.initElements(new DefaultElementLocatorFactory(item), this);
     }

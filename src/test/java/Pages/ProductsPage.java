@@ -14,8 +14,6 @@ public class ProductsPage extends BasePage {
 
     @FindBy(css = ".inventory_item")
     private List<WebElement> productList;
-    @FindBy(xpath = "//button[@class='btn_primary btn_inventory']")
-    private WebElement addBackpackToCartButton;
     @FindBy(css = "#shopping_cart_container")
     private WebElement cart;
     @FindBy(xpath = "//a[@id='item_4_img_link']/img")
@@ -31,18 +29,10 @@ public class ProductsPage extends BasePage {
         super(driver);
     }
 
-
-    public ProductsPage addRandomProductToCart(int quantity) {
-
-
-        return this;
-    }
-
     public String addRandomItemToCart() {
         ProductDetailPage randomProduct = new ProductDetailPage(productList.get(getRandomElement(productList.size() - 1)));
         String chosenProduct = randomProduct.getItemName();
         log.info("Chosen product is: " + chosenProduct);
-        //moveToElement(randomProduct.getAddToCartButton());
         clickOnElement(randomProduct.getAddToCartButton());
         return chosenProduct;
     }
