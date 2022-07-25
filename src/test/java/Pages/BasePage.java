@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,13 +12,14 @@ import org.slf4j.LoggerFactory;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Random;
 
 public class BasePage {
     private static Logger log = LoggerFactory.getLogger("BasePage.class");
     public WebDriver driver;
     public WebDriverWait wait;
     public Actions actions;
-      static String datePattern = "MM/dd/yyyy";
+    static String datePattern = "MM/dd/yyyy";
     static SimpleDateFormat format = new SimpleDateFormat(datePattern);
 
     public BasePage(WebDriver driver) {
@@ -28,13 +30,35 @@ public class BasePage {
 
     }
 
-    public void waitForElement(WebElement element){
+    public void clickOnElement(WebElement element) {
+        waitForElement(element);
+        element.click();
+    }
+
+    public void waitForElement(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
 
     }
-    public void sendKeys(WebElement element, String text){
+
+    public void moveToElement(WebElement element) {
+        actions.moveToElement(element).build().perform();
+        waitForElement(element);
+    }
+
+    public void scrollAndClick(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        clickOnElement(element);
+
+    }
+
+    public void sendKeys(WebElement element, String text) {
         element.clear();
         element.sendKeys(text);
+    }
+
+    public int getRandomElement(int index) {
+        return new Random().nextInt(index);
     }
 
 }

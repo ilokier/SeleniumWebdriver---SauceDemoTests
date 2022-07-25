@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.is;
 
 @Listeners({CustomListener.class})
 
-public class SauceDemoPositiveLoginTest extends TestBase {
+public class PositiveLoginTest extends TestBase {
     private static Logger log = LoggerFactory.getLogger("SauceDemoInventoryTest.class");
 
     @DataProvider(name = "data-provider")
@@ -23,14 +23,13 @@ public class SauceDemoPositiveLoginTest extends TestBase {
                 {getProperty("performance_username")}
 
         };
-
     }
 
     @Test(dataProvider = "data-provider")
     public void WhenUserIsLoggedInHeaderShouldDisplayProperTitle(String username) {
-        swagLabsLocatorsPage = saucedemoLocatorsPage.logIn(username, getProperty("password"));
-        String title = (swagLabsLocatorsPage.getHeaderTitle());
-        swagLabsLocatorsPage.logOut();
+        productsPage = loginPage.logIn(username, getProperty("password"));
+        String title = (productsPage.getHeaderTitle());
+        productsPage.logOut();
         assertThat(title, is(getProperty("headerTitle")));
     }
 }

@@ -1,18 +1,22 @@
 package Pages;
 
+import Pages.ProductDetailPages.ProductDetailPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SwagLabsLocatorsPage extends BasePage {
+import java.util.List;
+
+public class ProductsPage extends BasePage {
     private static Logger log = LoggerFactory.getLogger("SwagLabsLocatorsPage.class");
-    @FindBy(linkText = "Sauce Labs Backpack")
-    private WebElement backpackItem;
+
+    @FindBy(css = ".inventory_item")
+    private List<WebElement> productList;
     @FindBy(xpath = "//button[@class='btn_primary btn_inventory']")
     private WebElement addBackpackToCartButton;
-    @FindBy(css = "svg[data-prefix='fas']")
+    @FindBy(css = "#shopping_cart_container")
     private WebElement cart;
     @FindBy(xpath = "//a[@id='item_4_img_link']/img")
     private WebElement itemImage;
@@ -23,24 +27,29 @@ public class SwagLabsLocatorsPage extends BasePage {
     @FindBy(css = ".title")
     private WebElement headerTitle;
 
-    public SwagLabsLocatorsPage(WebDriver driver) {
+    public ProductsPage(WebDriver driver) {
         super(driver);
     }
 
 
-    public SwagLabsLocatorsPage pickBackpack() {
-        backpackItem.click();
+    public ProductsPage addRandomProductToCart(int quantity) {
+
+
         return this;
     }
 
-    public SwagLabsLocatorsPage addBackpackToCart() {
-        addBackpackToCartButton.click();
-        return this;
+    public String addRandomItemToCart() {
+        ProductDetailPage randomProduct = new ProductDetailPage(productList.get(getRandomElement(productList.size() - 1)));
+        String chosenProduct = randomProduct.getItemName();
+        log.info("Chosen product is: " + chosenProduct);
+        //moveToElement(randomProduct.getAddToCartButton());
+        clickOnElement(randomProduct.getAddToCartButton());
+        return chosenProduct;
     }
 
-    public SwagLabsLocatorsPage goToCart() {
-        cart.click();
-        return this;
+    public CartPage goToCart() {
+        clickOnElement(cart);
+        return new CartPage(driver);
     }
 
     public String imageValue() {

@@ -2,9 +2,10 @@ package Tests;
 
 import Configuration.AppProperties;
 import Configuration.DriverHandle;
-import Pages.SauceDemoCartPage;
-import Pages.SaucedemoLocatorsPage;
-import Pages.SwagLabsLocatorsPage;
+import Pages.CartPage;
+import Pages.LoginPage;
+import Pages.ProductsPage;
+import Tests.Steps.PositiveLoginStep;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -26,29 +27,27 @@ public class TestBase {
     protected static DriverHandle driverHandle;
     private static AppProperties appProperties;
     final static String BASE_URL = "https://www.saucedemo.com/";
-    protected SaucedemoLocatorsPage saucedemoLocatorsPage;
-    protected SauceDemoCartPage sauceDemoCartPage;
-    protected SwagLabsLocatorsPage swagLabsLocatorsPage;
+    protected LoginPage loginPage;
+    protected CartPage cartPage;
+    protected ProductsPage productsPage;
+    protected PositiveLoginStep positiveLoginStep;
+
 
     @BeforeSuite
-    public void beforeAll(){
-            appProperties = AppProperties.getInstance();
-            driverHandle = new DriverHandle();
-            driver = driverHandle.getDriver();
-        driver.get(getProperty("appUrl"));
-            log.info("<<<<<Driver initialized>>>");
+    public void beforeAll() {
+        appProperties = AppProperties.getInstance();
+        driverHandle = new DriverHandle();
+        driver = driverHandle.getDriver();
+        log.info("<<<<<Driver initialized>>>");
 
-        }
-
+    }
 
 
     @BeforeMethod
     public void setUp() {
-
-       //sauceDemoCartPage = new SauceDemoCartPage(driver);
-       //swagLabsLocatorsPage = new SwagLabsLocatorsPage(driver);
-       saucedemoLocatorsPage = new SaucedemoLocatorsPage(driver);
-
+        positiveLoginStep = new PositiveLoginStep(driver);
+        loginPage = new LoginPage(driver);
+        driver.get(getProperty("appUrl"));
     }
 
     @AfterSuite
@@ -56,11 +55,10 @@ public class TestBase {
         driver.quit();
     }
 
-
     public void capture(String tesMethodName) {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        File target = new File("///home/lonia/Pulpit/szkolenia, materiały/projekty/SauceDemoTest/screenshots/" + tesMethodName + ".jpg");
+        File target = new File(getProperty("user.dir") + "src/main/resources/screenshots" + tesMethodName + ".jpg");
         try {
             FileUtils.copyFile(source, target);
 

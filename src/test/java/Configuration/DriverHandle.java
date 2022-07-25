@@ -20,17 +20,17 @@ public class DriverHandle {
 
     public WebDriver getDriver() {
         this.browserName = System.getProperty("browserName");
-        log.info("Chosen browsername: " + browserName);
+        log.info("Chosen browserName: " + browserName);
         switch (this.browserName) {
             case "chrome":
                 driver = getChromeDriver();
                 break;
             case "firefox":
-              driver = getFireFoxDriver();
+                driver = getFireFoxDriver();
                 break;
             default:
-               driver = getIeDriver();
-               break;
+                driver = getIeDriver();
+                break;
         }
 
         return this.driver;

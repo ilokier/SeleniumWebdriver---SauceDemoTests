@@ -1,5 +1,6 @@
 package Tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -10,7 +11,7 @@ import static org.hamcrest.Matchers.is;
 
 @Listeners({CustomListener.class})
 
-public class SauceDemoNegativeLoginTest extends TestBase {
+public class NegativeLoginTest extends TestBase {
     @DataProvider(name = "data-provider")
     public Object[][] dataForRegistration() {
         return new Object[][]{
@@ -20,12 +21,17 @@ public class SauceDemoNegativeLoginTest extends TestBase {
         };
     }
 
+    @AfterMethod
+    public void refresh() {
+        driver.navigate().refresh();
+    }
 
     @Test(dataProvider = "data-provider")
     public void GivenIncorrectLoginDataUserShouldNotBeenLoggedIn(String username, String password) {
-        saucedemoLocatorsPage
+        loginPage
                 .logIn(username, password);
-        assertThat(saucedemoLocatorsPage.getErrorMessage(), is(getProperty("bad_credentials_message")));        ;
+        assertThat(loginPage.getErrorMessage(), is(getProperty("bad_credentials_message")));
+
     }
 }
 
