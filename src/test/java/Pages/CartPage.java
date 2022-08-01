@@ -1,5 +1,6 @@
 package Pages;
 
+import Models.ItemModel;
 import Pages.ProductDetailPages.ProductDetailPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,22 +12,34 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CartPage {
+public class CartPage extends BasePage {
     private static Logger log = LoggerFactory.getLogger("CartPage.class");
 
     public CartPage(WebDriver driver) {
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
     @FindBy(css = ".cart_item")
-    List<WebElement> cartInventoryItem;
+    private List<WebElement> cartInventoryItem;
+    @FindBy(css = "#checkout")
+    private WebElement checkoutButton;
 
-    public List<String> getItemList() {
+    public List<String> getItemNameList() {
         List<String> productNames = cartInventoryItem.stream()
                 .map(product -> new ProductDetailPage(product).getItemName())
                 .collect(Collectors.toList());
         return productNames;
     }
+
+    public List<ItemModel> getItemList() {
+        List<ItemModel> products = cartInventoryItem.stream()
+                .map(product -> new ItemModel(new ProductDetailPage(product).getItemName(), new ProductDetailPage(product).getItemPrice()))
+                .collect(Collectors.toList());
+        log.info("Cart item list: " + products);
+        return products;
+    }
+
 
     public CartPage removeItemFromCart() {
         new ProductDetailPage(cartInventoryItem.get(0)).getRemoveButton().click();
@@ -37,6 +50,11 @@ public class CartPage {
         int numberOfProducts = cartInventoryItem.size();
         log.info("Number of products in cart: " + numberOfProducts);
         return numberOfProducts;
+    }
+
+    public CartPage checkout() {
+        clickOnElement(checkoutButton);
+        return this;
     }
 
 }

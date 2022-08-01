@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 public class ProductDetailPage {
     private static Logger log = LoggerFactory.getLogger("ProductDetailPage.class");
-    
+
     public ProductDetailPage(WebElement item) {
         PageFactory.initElements(new DefaultElementLocatorFactory(item), this);
     }
@@ -31,8 +31,8 @@ public class ProductDetailPage {
         return addToCartButton;
     }
 
-    public WebElement getItemPrice() {
-        return itemPrice;
+    public String getItemPrice() {
+        return itemPrice.getText();
     }
 
     public WebElement getRemoveButton() {

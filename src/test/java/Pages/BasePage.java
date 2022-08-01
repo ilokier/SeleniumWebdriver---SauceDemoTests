@@ -1,5 +1,6 @@
 package Pages;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,7 @@ public class BasePage {
     public WebDriver driver;
     public WebDriverWait wait;
     public Actions actions;
+    static Faker faker = new Faker();
     static String datePattern = "MM/dd/yyyy";
     static SimpleDateFormat format = new SimpleDateFormat(datePattern);
 
@@ -28,6 +30,18 @@ public class BasePage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
         //actions = new Actions(driver);
 
+    }
+
+    public String getRandomFirstName() {
+        return faker.name().firstName();
+    }
+
+    public String getRandomlastName() {
+        return faker.name().lastName();
+    }
+
+    public String getRandomPostalCode() {
+        return faker.numerify("##-###");
     }
 
     public void clickOnElement(WebElement element) {

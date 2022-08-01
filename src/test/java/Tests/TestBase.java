@@ -12,7 +12,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -50,10 +49,10 @@ public class TestBase {
         driver.get(getProperty("appUrl"));
     }
 
-    @AfterSuite
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterSuite
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
     public void capture(String tesMethodName) {
         TakesScreenshot ts = (TakesScreenshot) driver;
