@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -21,10 +22,10 @@ import java.io.IOException;
 import static java.lang.System.getProperty;
 
 public class TestBase {
-    protected static WebDriver driver;
+    protected WebDriver driver;
     private static Logger log = LoggerFactory.getLogger("BaseTest.class");
-    protected static DriverHandle driverHandle;
-    private static AppProperties appProperties;
+    protected DriverHandle driverHandle;
+    private AppProperties appProperties;
     final static String BASE_URL = "https://www.saucedemo.com/";
     protected LoginPage loginPage;
     protected CartPage cartPage;
@@ -35,24 +36,22 @@ public class TestBase {
     @BeforeSuite
     public void beforeAll() {
         appProperties = AppProperties.getInstance();
-        driverHandle = new DriverHandle();
-        driver = driverHandle.getDriver();
-        log.info("<<<<<Driver initialized>>>");
-
     }
-
 
     @BeforeMethod
     public void setUp() {
+        driverHandle = new DriverHandle();
+        driver = driverHandle.getDriver();
+        log.info("<<<<<Driver initialized>>>");
         positiveLoginStep = new PositiveLoginStep(driver);
         loginPage = new LoginPage(driver);
         driver.get(getProperty("appUrl"));
     }
 
-//    @AfterSuite
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 
     public void capture(String tesMethodName) {
         TakesScreenshot ts = (TakesScreenshot) driver;

@@ -51,8 +51,12 @@ public class BasePage {
 
     public void waitForElement(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
-
     }
+
+    public void waitForElementVisible(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
 
     public void moveToElement(WebElement element) {
         actions.moveToElement(element).build().perform();

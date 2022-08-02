@@ -32,6 +32,7 @@ public class ProductDetailPage {
     }
 
     public String getItemPrice() {
+
         return itemPrice.getText();
     }
 

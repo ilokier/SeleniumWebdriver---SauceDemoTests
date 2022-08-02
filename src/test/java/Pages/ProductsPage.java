@@ -70,12 +70,12 @@ public class ProductsPage extends BasePage {
     }
 
     public void logOut() {
-        burgerMenu.click();
-        waitForElement(logOut);
-        logOut.click();
+        clickOnElement(burgerMenu);
+        clickOnElement(logOut);
     }
 
     public String getHeaderTitle() {
+        waitForElementVisible(headerTitle);
         String header = headerTitle.getText();
         log.info("Header title is: " + header);
         return header;

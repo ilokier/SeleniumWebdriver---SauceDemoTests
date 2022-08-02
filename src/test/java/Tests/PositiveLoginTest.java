@@ -1,8 +1,8 @@
 package Tests;
 
+import Tests.Data.LoginData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -15,17 +15,8 @@ import static org.hamcrest.Matchers.is;
 public class PositiveLoginTest extends TestBase {
     private static Logger log = LoggerFactory.getLogger("SauceDemoInventoryTest.class");
 
-    @DataProvider(name = "data-provider")
-    public Object[][] dataForRegistration() {
-        return new Object[][]{
-                {getProperty("standard_username")},
-                {getProperty("problem_username")},
-                {getProperty("performance_username")}
 
-        };
-    }
-
-    @Test(dataProvider = "data-provider")
+    @Test(dataProvider = "goodCredentials", dataProviderClass = LoginData.class)
     public void WhenUserIsLoggedInHeaderShouldDisplayProperTitle(String username) {
         productsPage = loginPage.logIn(username, getProperty("password"));
         String title = (productsPage.getHeaderTitle());

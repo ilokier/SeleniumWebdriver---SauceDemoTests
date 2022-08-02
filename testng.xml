@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+    <test name="Cart tests">
+        <classes>
+            <class name="Tests.CartTest">
+                <methods>
+                    <include name="WhenItemAddedToCartShouldBeVisibleInCart"/>
+                </methods>
+            </class>
+
+            <class name="Tests.CheckoutTest">
+                <methods>
+                    <include name="ItemShouldBeSameInCheckout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login Tests">
+        <classes>
+            <class name="Tests.PositiveLoginTest">
+                <methods>
+                    <include name="WhenUserIsLoggedInHeaderShouldDisplayProperTitle"/>
+                </methods>
+            </class>
+
+            <class name="Tests.NegativeLoginTest">
+                <methods>
+                    <include name="GivenIncorrectLoginDataShouldShowErrorMessage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
