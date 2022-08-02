@@ -45,6 +45,7 @@ public class TestBase {
         log.info("<<<<<Driver initialized>>>");
         positiveLoginStep = new PositiveLoginStep(driver);
         loginPage = new LoginPage(driver);
+        driver.manage().window().maximize();
         driver.get(getProperty("appUrl"));
     }
 

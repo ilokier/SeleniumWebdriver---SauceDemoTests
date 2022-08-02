@@ -1,6 +1,7 @@
 package Tests;
 
-import Tests.Data.LoginData;
+import Tests.Helpers.CustomListener;
+import Tests.Helpers.LoginData;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;

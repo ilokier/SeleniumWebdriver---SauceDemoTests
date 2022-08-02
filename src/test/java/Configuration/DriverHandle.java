@@ -8,8 +8,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,19 +20,17 @@ public class DriverHandle {
         this.browserName = System.getProperty("browserName");
         log.info("Chosen browserName: " + browserName);
         switch (this.browserName) {
-            case "chrome":
-                driver = getChromeDriver();
-                break;
             case "firefox":
                 driver = getFireFoxDriver();
                 break;
+            case "edge":
+                driver = getEdgeDriver();
+                break;
             default:
-                driver = getIeDriver();
+                driver = getChromeDriver();
                 break;
         }
-
         return this.driver;
-
     }
 
     private WebDriver getChromeDriver() {
@@ -47,14 +43,7 @@ public class DriverHandle {
     private WebDriver getFireFoxDriver() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         WebDriverManager.firefoxdriver().setup();
-        firefoxOptions.addArguments("start-maximized");
         return new FirefoxDriver(firefoxOptions);
-    }
-
-    private WebDriver getIeDriver() {
-        InternetExplorerOptions ieOptions = new InternetExplorerOptions().ignoreZoomSettings();
-        WebDriverManager.iedriver().setup();
-        return new InternetExplorerDriver(ieOptions);
     }
 
     private WebDriver getEdgeDriver() {

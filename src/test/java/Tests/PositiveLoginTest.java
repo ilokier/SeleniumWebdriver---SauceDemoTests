@@ -1,6 +1,7 @@
 package Tests;
 
-import Tests.Data.LoginData;
+import Tests.Helpers.CustomListener;
+import Tests.Helpers.LoginData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Listeners;

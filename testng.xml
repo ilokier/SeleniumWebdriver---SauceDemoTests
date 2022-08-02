@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="tests">
-    <test name="Cart tests">
+<suite name="All Test Suite" parallel="classes" thread-count="2">
+    <test name="Cart tests" preserve-order="false">
         <classes>
             <class name="Tests.CartTest">
                 <methods>
@@ -16,7 +16,7 @@
             </class>
         </classes>
     </test>
-    <test name="Login Tests">
+    <test name="Login Tests" preserve-order="false">
         <classes>
             <class name="Tests.PositiveLoginTest">
                 <methods>
