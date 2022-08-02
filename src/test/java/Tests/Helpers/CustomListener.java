@@ -20,17 +20,16 @@ public class CustomListener extends TestBase implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("!!!!!!!!!!!!!!!!!!!Test failed: " + result.getName() + "!!!!!!!!!!!!!!!!!!!");
-        capture(result.getMethod().getMethodName());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         System.out.println("!!!!!!!!!!!!!!!!!!!Test skipped: " + result.getName() + "!!!!!!!!!!!!!!!!!!!");
-        capture(result.getMethod().getMethodName());
+
     }
 
     @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
     }
 
     @Override
@@ -40,4 +39,5 @@ public class CustomListener extends TestBase implements ITestListener {
     @Override
     public void onFinish(ITestContext iTestContext) {
     }
+
 }

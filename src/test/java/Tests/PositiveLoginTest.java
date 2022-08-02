@@ -11,8 +11,7 @@ import static java.lang.System.getProperty;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-@Listeners({CustomListener.class})
-
+@Listeners(CustomListener.class)
 public class PositiveLoginTest extends TestBase {
     private static Logger log = LoggerFactory.getLogger("SauceDemoInventoryTest.class");
 
