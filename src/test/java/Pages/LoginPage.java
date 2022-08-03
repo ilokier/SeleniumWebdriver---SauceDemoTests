@@ -7,11 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LoginPage extends BasePage {
-    private static Logger log = LoggerFactory.getLogger("LoginPage.class");
-
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
 
     @FindBy(css = "#user-name")
     private WebElement username;
@@ -21,6 +16,12 @@ public class LoginPage extends BasePage {
     private WebElement loginButton;
     @FindBy(css = ".error h3")
     private WebElement loginError;
+
+    private static Logger log = LoggerFactory.getLogger("LoginPage.class");
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+    }
 
 
     public ProductsPage logIn(String userName, String passWord) {

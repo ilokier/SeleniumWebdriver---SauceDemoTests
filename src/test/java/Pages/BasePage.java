@@ -1,6 +1,7 @@
 package Pages;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,22 +14,23 @@ import org.slf4j.LoggerFactory;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Locale;
 import java.util.Random;
 
 public class BasePage {
     private static Logger log = LoggerFactory.getLogger("BasePage.class");
-    public WebDriver driver;
-    public WebDriverWait wait;
-    public Actions actions;
-    static Faker faker = new Faker();
-    static String datePattern = "MM/dd/yyyy";
-    static SimpleDateFormat format = new SimpleDateFormat(datePattern);
+    protected WebDriver driver;
+    private WebDriverWait wait;
+    private Actions actions;
+    private static Faker faker = new Faker(new Locale("pl-PL"));
+    private String datePattern = "MM/dd/yyyy";
+    private SimpleDateFormat format = new SimpleDateFormat(datePattern);
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(System.getProperty("webElementTimeOut"))));
-        //actions = new Actions(driver);
+        actions = new Actions(driver);
 
     }
 
@@ -79,4 +81,9 @@ public class BasePage {
         return new Random().nextInt(index);
     }
 
+    public String getHeaderTitle() {
+        String header = driver.findElement(By.cssSelector(".title")).getText();
+        log.info(getClass() + ": " + "Actual header is: " + header);
+        return header;
+    }
 }

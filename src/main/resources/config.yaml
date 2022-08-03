@@ -14,7 +14,12 @@ environment:
     password: secret_sauce
     incorrect_password: incorrect_password
     bad_credentials_message: "Epic sadface: Username and password do not match any user in this service"
-    headerTitle: PRODUCTS
+    productPageHeaderTitle: PRODUCTS
+    cartPageHeaderTitle: YOUR CART
+    checkoutHeaderTitle: "CHECKOUT: OVERVIEW"
+    thanksMessage: THANK YOU FOR YOUR ORDER
+    finishHeaderTitle: "CHECKOUT: COMPLETE!"
+
     active: true
   test2:
     envName: test2
@@ -26,5 +31,9 @@ environment:
     password: secret_sauce
     incorrect_password: incorrect_password
     bad_credentials_message: "Epic sadface: Username and password do not match any user in this service"
-    headerTitle: PRODUCTS
+    productPageHeaderTitle: PRODUCTS
+    cartPageHeaderTitle: YOUR CART
+    checkoutHeaderTitle: "CHECKOUT: OVERVIEW"
+    thanksMessage: THANK YOU FOR YOUR ORDER
+    finishHeaderTitle: "CHECKOUT: COMPLETE!"
     active: false

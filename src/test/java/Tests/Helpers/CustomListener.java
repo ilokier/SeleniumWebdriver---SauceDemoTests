@@ -30,6 +30,7 @@ public class CustomListener extends TestBase implements ITestListener {
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+
     }
 
     @Override
@@ -39,5 +40,6 @@ public class CustomListener extends TestBase implements ITestListener {
     @Override
     public void onFinish(ITestContext iTestContext) {
     }
+
 
 }

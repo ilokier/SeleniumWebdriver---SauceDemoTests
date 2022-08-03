@@ -10,10 +10,8 @@ import static java.lang.System.getProperty;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-@Listeners({CustomListener.class})
-
+@Listeners(CustomListener.class)
 public class NegativeLoginTest extends TestBase {
-
 
     @AfterMethod
     public void refresh() {

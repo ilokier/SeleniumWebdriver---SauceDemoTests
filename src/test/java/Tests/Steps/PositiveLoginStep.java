@@ -16,10 +16,10 @@ public class PositiveLoginStep extends LoginPage {
         super(driver);
     }
 
-    public ProductsPage logStandarUser() {
+    public ProductsPage logStandardUser() {
         loginPage = new LoginPage(driver);
         productsPage = loginPage.logIn(getProperty("standard_username"), getProperty("password"));
-        assertThat(productsPage.getHeaderTitle(), is(getProperty("headerTitle")));
+        assertThat(productsPage.getHeaderTitle(), is(getProperty("productPageHeaderTitle")));
         return new ProductsPage(driver);
     }
 }

@@ -35,7 +35,8 @@ public class DriverHandle {
 
     private WebDriver getChromeDriver() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().driverVersion("104.0.5112.29").setup();
         chromeOptions.addArguments("start-maximized");
         return new ChromeDriver(chromeOptions);
     }

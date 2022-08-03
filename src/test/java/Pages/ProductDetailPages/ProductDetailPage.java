@@ -8,11 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ProductDetailPage {
-    private static Logger log = LoggerFactory.getLogger("ProductDetailPage.class");
-
-    public ProductDetailPage(WebElement item) {
-        PageFactory.initElements(new DefaultElementLocatorFactory(item), this);
-    }
 
     @FindBy(css = ".inventory_item_name")
     private WebElement itemName;
@@ -22,6 +17,12 @@ public class ProductDetailPage {
     private WebElement itemPrice;
     @FindBy(css = ".cart_button")
     WebElement removeButton;
+
+    private static Logger log = LoggerFactory.getLogger("ProductDetailPage.class");
+
+    public ProductDetailPage(WebElement item) {
+        PageFactory.initElements(new DefaultElementLocatorFactory(item), this);
+    }
 
     public String getItemName() {
         return itemName.getText();

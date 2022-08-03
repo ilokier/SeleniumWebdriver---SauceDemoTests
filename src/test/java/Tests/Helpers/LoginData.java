@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import static java.lang.System.getProperty;
 
 public class LoginData {
-    @org.testng.annotations.DataProvider(name = "badCredentials")
+    @DataProvider(name = "badCredentials")
     public static Object[][] dataForRegistrationBad() {
         return new Object[][]{
                 {getProperty("standard_username"), getProperty("incorrect_password")},

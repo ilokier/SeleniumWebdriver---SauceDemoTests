@@ -14,7 +14,7 @@ public class CartTest extends TestBase {
 
     @Test
     public void WhenItemAddedToCartShouldBeVisibleInCart() {
-        productsPage = positiveLoginStep.logStandarUser();
+        productsPage = positiveLoginStep.logStandardUser();
         cartPage = new AddToCartStep(driver).addItemToCart();
         cartPage.removeItemFromCart();
         assertThat(cartPage.checkNumberOfProductsInCart(), equalTo(0));

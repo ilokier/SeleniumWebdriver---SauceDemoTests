@@ -13,23 +13,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CartPage extends BasePage {
-    private static Logger log = LoggerFactory.getLogger("CartPage.class");
-
-    public CartPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
-    }
 
     @FindBy(css = ".cart_item")
     private List<WebElement> cartInventoryItem;
     @FindBy(css = "#checkout")
     private WebElement checkoutButton;
 
-    public List<String> getItemNameList() {
-        List<String> productNames = cartInventoryItem.stream()
-                .map(product -> new ProductDetailPage(product).getItemName())
-                .collect(Collectors.toList());
-        return productNames;
+    private static Logger log = LoggerFactory.getLogger("CartPage.class");
+
+    public CartPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public List<ItemModel> getItemList() {

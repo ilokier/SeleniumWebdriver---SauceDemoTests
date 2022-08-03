@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductsPage extends BasePage {
-    private static Logger log = LoggerFactory.getLogger("SwagLabsLocatorsPage.class");
 
     @FindBy(css = ".inventory_item")
     private List<WebElement> productList;
@@ -24,12 +23,9 @@ public class ProductsPage extends BasePage {
     private WebElement burgerMenu;
     @FindBy(css = "#logout_sidebar_link")
     private WebElement logOut;
-    @FindBy(css = ".title")
-    private WebElement headerTitle;
 
-
+    private static Logger log = LoggerFactory.getLogger("ProductsPage.class");
     private List<ItemModel> items;
-
 
     public ProductsPage(WebDriver driver) {
         super(driver);
@@ -72,13 +68,6 @@ public class ProductsPage extends BasePage {
     public void logOut() {
         clickOnElement(burgerMenu);
         clickOnElement(logOut);
-    }
-
-    public String getHeaderTitle() {
-        waitForElementVisible(headerTitle);
-        String header = headerTitle.getText();
-        log.info("Header title is: " + header);
-        return header;
     }
 
     private ProductDetailPage selectRandomItem() {
